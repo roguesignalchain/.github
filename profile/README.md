@@ -6,7 +6,7 @@
   [![Chain ID](https://img.shields.io/badge/CHAIN_ID-800055-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
   [![Consensus](https://img.shields.io/badge/CONSENSUS-RandomX_%5Brx%2F0%5D-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org/consensus/randomx)
   [![Difficulty](https://img.shields.io/badge/DIFFICULTY-LWMA--1_%5BN%3D60%5D-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
-  [![Target](https://img.shields.io/badge/BLOCK_TIME-10s-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
+  [![Target](https://img.shields.io/badge/BLOCK_TIME-30s-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
   [![Supply](https://img.shields.io/badge/MAX_SUPPLY-100%2C000%2C000_ROGUE-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://roguechain.org)
   [![EVM Compatible](https://img.shields.io/badge/VM-EVM_COMPATIBLE-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
 
@@ -32,15 +32,17 @@
 Network Name        = Rogue Signal
 Currency Ticker     = ROGUE
 Chain ID            = 800055
-Consensus Engine    = RandomX (rx/0 profile)
-Block Time Target   = 10 seconds
-Difficulty Rule     = LWMA-1 (N=60 blocks)
-Initial Reward      = 8 ROGUE per block
-Halving Interval    = 6,300,000 blocks (~2 years)
-Reward Split        = 95% Miner (7.6 ROGUE) / 5% Protocol Treasury (0.4 ROGUE)
+Consensus Engine    = RandomX (rx/0 profile, full-node solo mining)
+Block Time Target   = 30 seconds
+Difficulty Rule     = LWMA-1 (N=60 blocks, +-33% clamp)
+Initial Reward      = 24 ROGUE per block
+Halving Interval    = 2,100,000 blocks (~2 years)
+Reward Split        = 95% Miner (22.8 ROGUE) / 5% Protocol Treasury (1.2 ROGUE)
 Supply Cap          = 100,000,000 ROGUE (Hard cap, zero tail emission)
-Seed Rotation       = Every 2048 blocks (64-block lag)
-Validation Bounds   = Strict MTP-11 + 15s future drift limit
+Anti-51% Finality   = MaxReorgDepth 90 blocks (~45m) + ECBP-1100 (MESS)
+Seed Rotation       = Every 2048 blocks (~17.07h) with 64-block (~32m) lag
+Validation Bounds   = Strict MTP-11 + 15s future drift + 64B max ExtraData
+Genesis Block Hash  = 0xc6f7f29d6a23f1921f3e514401a82a60ffa1f21885497dbf6414e8bb2f22b91d
 ```
 
 ---
