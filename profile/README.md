@@ -52,7 +52,7 @@ Validation Bounds   = Strict MTP-11 + 15s future drift limit
 | :--- | :--- | :---: |
 | [`rogue-core-chain`](https://github.com/roguesignalchain/rogue-core-chain) | Core Go/C++ blockchain daemon (`core-rogue`), native RandomX consensus, LWMA-1 engine & integrated CPU miner. | `Active` |
 | [`rogue-desktop-client`](https://github.com/roguesignalchain/rogue-desktop-client) | High-contrast tactical desktop GUI wallet & 1-click miner manager powered by Tauri v2 and Rust. | `Active` |
-| [`rogue-docs`](https://github.com/roguesignalchain/rogue-docs) | Official developer documentation, architecture specifications, API references & brand guide. | `Active` |
+| [`rogue-chain-docs`](https://github.com/roguesignalchain/rogue-chain-docs) | Official developer documentation, architecture specifications, API references & brand guide. | `Active` |
 | [`rogue-main-website`](https://github.com/roguesignalchain/rogue-main-website) | Official public web portal, live network status and ecosystem launchpad. | `Active` |
 
 ---
