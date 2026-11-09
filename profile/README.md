@@ -12,15 +12,14 @@
 
   <br/>
 
-  <h3><code>[SOVEREIGN CPU-ONLY PROOF-OF-WORK BLOCKCHAIN]</code></h3>
+  <h3><code>[SOVEREIGN CPU-ONLY PROOF-OF-WORK EVM BLOCKCHAIN]</code></h3>
   <p><b>Fair-launch, ASIC-resistant Layer-1 smart contract execution environment secured purely by consumer CPUs.</b></p>
 
   <p>
     <a href="https://roguechain.org"><b>Website</b></a> •
     <a href="https://docs.roguechain.org"><b>Documentation</b></a> •
-    <a href="https://explorer.roguesignal.org"><b>Explorer</b></a> •
-    <a href="https://x.com/roguesignal"><b>X / Twitter</b></a> •
-    <a href="https://t.me/roguesignalchain"><b>Telegram</b></a>
+    <a href="https://x.com/roguesignal_"><b>X / Twitter</b></a> •
+    <a href="https://discord.gg/c6bwF6Wk6c"><b>Discord</b></a>
   </p>
 </div>
 
@@ -88,5 +87,6 @@ cd rogue-core-chain
 
 <div align="center">
   <sub>"Sovereignty is not granted. It is computed."</sub><br/>
-  <b>ROGUE SIGNAL PROTOCOL • OBSIDIAN VOID • CHAIN ID 800055</b>
+  <b>ROGUE SIGNAL PROTOCOL • CHAIN ID 800055</b>
 </div>
+
