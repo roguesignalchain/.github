@@ -32,18 +32,17 @@
 Network Name        = Rogue Signal
 Currency Ticker     = ROGUE
 Chain ID            = 800055
-Consensus Engine    = RandomX (rx/0 profile, full-node solo mining)
+Consensus Engine    = RandomX (rx/0 profile)
 Block Time Target   = 30 seconds
 Difficulty Rule     = LWMA-1 (N=60 blocks, +-33% clamp)
 Initial Reward      = 25 ROGUE per block
 Halving Interval    = 2,000,000 blocks (~1.90 years)
 Reward Split        = 95% Miner (23.75 ROGUE) / 5% Protocol Treasury (1.25 ROGUE)
 Supply Cap          = 100,000,000 ROGUE (Exact hard cap, zero tail emission)
-Anti-51% Finality   = MaxReorgDepth 90 blocks (~45m) + ECBP-1100 (MESS)
-Seed Rotation       = Every 2048 blocks (~17.07h) with 64-block (~32m) lag
+Seed Rotation       = Every 2048 blocks (64-block lag)
 Validation Bounds   = Strict MTP-11 + 15s future drift limit
+Anti-51% Finality   = MaxReorgDepth 90 + ECBP-1100 (MESS)
 Header Rules        = MaxExtraData 64B + EmptyUncleHash
-Genesis Block Hash  = 0xc6f7f29d6a23f1921f3e514401a82a60ffa1f21885497dbf6414e8bb2f22b91d
 ```
 
 ---
