@@ -9,6 +9,7 @@
   [![Target](https://img.shields.io/badge/BLOCK_TIME-30s-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
   [![Supply](https://img.shields.io/badge/MAX_SUPPLY-100%2C000%2C000_ROGUE-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://roguechain.org)
   [![EVM Compatible](https://img.shields.io/badge/VM-EVM_COMPATIBLE-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org)
+  [![Gamification](https://img.shields.io/badge/GAMIFICATION-ON--CHAIN_TIERS-000000?style=for-the-badge&logoColor=white&labelColor=18181b)](https://docs.roguechain.org/network/consensus-parameters#miner-level-showcase)
 
   <br/>
 
@@ -43,7 +44,28 @@ Seed Rotation       = Every 2048 blocks (64-block lag)
 Validation Bounds   = Strict MTP-11 + 15s future drift limit
 Anti-51% Finality   = MaxReorgDepth 90 + ECBP-1100 (MESS)
 Header Rules        = MaxExtraData 64B + EmptyUncleHash
+Gamification State  = Native StateDB (0x...0020), 7 Cyberpunk Tiers
 ```
+
+---
+
+### 🎖️ Protocol-Level Gamification & Cyberpunk Miner Medals
+
+Rogue Signal pioneers native on-chain gamification for Proof-of-Work solo miners. Blocks mined are permanently and deterministically tracked within the canonical StateDB under system address `0x0000000000000000000000000000000000000020` (`keccak256(miner.Bytes())`), active from Block 1 onwards with complete reorg safety ($\le 90$ blocks).
+
+Miners progress through 7 cyberpunk tiers unlocked strictly by cryptographic proof of work, exposed through native RPC endpoints (`rogue_getMinerLevel`, `rogue_getMinerStats`):
+
+| Medal | Level | Rank Title | Blocks Mined | Target XP | Status |
+| :---: | :---: | :--- | :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl0.png" width="56" height="56" alt="Level 0 - Unranked Runner" /> | **Lv.0** | **Unranked Runner** | `0` | `1` | `Active` |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl1.png" width="56" height="56" alt="Level 1 - Recon Runner" /> | **Lv.1** | **Recon Runner** | `1 – 24` | `25` | `Active` |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl2.png" width="56" height="56" alt="Level 2 - Signal Scraper" /> | **Lv.2** | **Signal Scraper** | `25 – 99` | `100` | `Active` |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl3.png" width="56" height="56" alt="Level 3 - Hash Warden" /> | **Lv.3** | **Hash Warden** | `100 – 499` | `500` | `Active` |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl4.png" width="56" height="56" alt="Level 4 - Cipher Architect" /> | **Lv.4** | **Cipher Architect** | `500 – 2,499` | `2,500` | `Active` |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl5.png" width="56" height="56" alt="Level 5 - Apex Operator" /> | **Lv.5** | **Apex Operator** | `2,500 – 9,999` | `10,000` | `Active` |
+| <img src="https://raw.githubusercontent.com/roguesignalchain/.github/main/assets/badges/lvl6.png" width="56" height="56" alt="Level 6 - Rogue Singularity" /> | **Lv.6** | **Rogue Singularity** | `10,000+` | `MAX` | `Legendary` |
+
+> Supported natively in the official [**Rogue Desktop Client**](https://github.com/roguesignalchain/rogue-desktop-client) featuring procedural Voxel Bot avatars and dynamic XP progress meters.
 
 ---
 
@@ -71,7 +93,7 @@ cd rogue-core-chain
 ./scripts/build-core.sh
 
 # Launch node and join the network
-./build/bin/core-rogue --rogue --http --http.api eth,net,web3
+./build/bin/core-rogue --rogue --http --http.api eth,net,web3,rogue
 
 # Or mine with your local CPU threads
 ./build/bin/core-rogue --rogue --mine --miner.threads 4 --miner.etherbase 0xYourWalletAddress
@@ -84,6 +106,7 @@ cd rogue-core-chain
 * **ASIC/FPGA Immunity:** Democratized consensus through memory-hard cryptographic puzzles optimized strictly for consumer CPU hardware cache.
 * **No Premine, No ICO, No VCs:** 100% fair launch emission. Every ROGUE token in existence must be computed block by block.
 * **Zero Shared-Library Bloat:** Statically linked, high-performance C++20 RandomX engine embedded into a hardened Ethereum Virtual Machine.
+* **Proof of Merit:** Protocol-level miner ranks earned solely through validated computational work, preserving economic hard caps while gamifying network defense.
 
 ---
 
@@ -91,4 +114,3 @@ cd rogue-core-chain
   <sub>"Sovereignty is not granted. It is computed."</sub><br/>
   <b>ROGUE SIGNAL PROTOCOL • CHAIN ID 800055</b>
 </div>
-
