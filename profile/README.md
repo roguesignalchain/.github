@@ -51,9 +51,9 @@ Gamification State  = Native StateDB (0x...0020), 7 Cyberpunk Tiers
 
 ### 🎖️ Protocol-Level Gamification & Cyberpunk Miner Medals
 
-Rogue Signal pioneers native on-chain gamification for Proof-of-Work solo miners. Blocks mined are permanently and deterministically tracked within the canonical StateDB under system address `0x0000000000000000000000000000000000000020` (`keccak256(miner.Bytes())`), active from Block 1 onwards with complete reorg safety ($\le 90$ blocks).
+Rogue Signal pioneers native on-chain gamification for Proof-of-Work solo miners. A pure Solidity `RogueMinerReputation` system contract is deployed natively at Block 0 under `0x0000000000000000000000000000000000000020`, with canonical block counts stored in mapping slot `1` (`keccak256(abi.encode(miner, uint256(1)))`) and complete reorg determinism under `ECBP-1100 (MESS)`.
 
-Miners progress through 7 cyberpunk tiers unlocked strictly by cryptographic proof of work, exposed through native RPC endpoints (`rogue_getMinerLevel`, `rogue_getMinerStats`):
+Miners progress through 7 cyberpunk tiers unlocked strictly by cryptographic proof of work, composable on-chain via `STATICCALL` and standard EVM `eth_call` (`getMinerLevel`, `getMinerStats`, `meetsLevel`):
 
 | Medal | Level | Rank Title | Blocks Mined | Target XP | Status |
 | :---: | :---: | :--- | :---: | :---: | :---: |
